@@ -1,0 +1,84 @@
+#VRML_SIM R2023b utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.235 -0.881 -0.238 1.291
+  position 1.5 1.5 1.5
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+
+RectangleArena {
+  floorSize 2 2
+}
+
+KukaYouBot {
+  translation 0 0 0
+  rotation 0 1 0 0
+  name "kuka_youbot"
+  controller "kuka_controller"
+}
+
+Solid {
+  translation 0.3 0.1 0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 0.05 0.05
+      }
+    }
+  ]
+  name "red_box"
+  boundingObject Box {
+    size 0.05 0.05 0.05
+  }
+}
+
+Solid {
+  translation 0.5 0.05 0.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.3
+        radius 0.1
+      }
+    }
+  ]
+  name "blue_obstacle"
+  boundingObject Cylinder {
+    height 0.3
+    radius 0.1
+  }
+}
+
+Solid {
+  translation -0.3 0.05 0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 0.05 0.05
+      }
+    }
+  ]
+  name "green_target"
+  boundingObject Box {
+    size 0.05 0.05 0.05
+  }
+}

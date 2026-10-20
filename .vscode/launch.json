@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Webots Python Debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/controllers/kuka_controller/kuka_controller.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/libraries:${workspaceFolder}/controllers"
+            }
+        }
+    ]
+}
